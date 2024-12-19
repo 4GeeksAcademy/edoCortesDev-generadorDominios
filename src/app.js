@@ -3,23 +3,19 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-// Variables globales
-var pronoun = ["the", "our"]; // Lista de pronombres
-var adj = ["great", "big"]; // Lista de adjetivos
-var noun = ["jogger", "racoon"]; // Lista de sustantivos
+var pronoun = ["the", "our"];
+var adj = ["great", "big"];
+var noun = ["jogger", "racoon"];
 
-// Función para generar nombres de dominio
 function generateDomains() {
-  var domainList = document.getElementById("domain-list"); // Referencia al elemento UL en HTML
+  var domainList = document.getElementById("domain-list");
 
   for (var i = 0; i < pronoun.length; i++) {
     for (var j = 0; j < adj.length; j++) {
       for (var k = 0; k < noun.length; k++) {
-        // Crear un elemento de lista para cada dominio
         var listItem = document.createElement("li");
         listItem.textContent = pronoun[i] + adj[j] + noun[k] + ".com";
 
-        // Agregar el elemento de lista al UL
         domainList.appendChild(listItem);
       }
     }
